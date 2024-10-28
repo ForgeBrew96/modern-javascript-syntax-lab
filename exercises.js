@@ -233,7 +233,7 @@ console.log(userProfile[propertyName])
 //   addThreeNumbers(2);
   
 
-//<-------------------------------------exercise 8--------------------------------->
+//<-------------------------------------exercise 8 & 9--------------------------------->
 
 // Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
 
@@ -264,7 +264,7 @@ catColorsentence('dog', 'magenta')
 
 //&& grabs the first falsi (or last value)     || grabs the first truthi or last value
 
-//<-------------------------------------exercise 9--------------------------------->
+//<-------------------------------------exercise 10--------------------------------->
 // 1. SET LANGUAGE
 
 // Construct a single line of code that assigns a default value using the logical OR operator. This line should match the logic of the following statement: 
@@ -301,7 +301,7 @@ console.log('User theme setting:', USER_THEME);
 
 
 
-//<-------------------------------------exercise 10--------------------------------->
+//<-------------------------------------exercise 11--------------------------------->
 // Optional chaining, for grabbing deeply seeded variables in an object
 
 const adventurer = {
