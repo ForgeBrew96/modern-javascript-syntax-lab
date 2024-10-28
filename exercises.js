@@ -182,3 +182,144 @@ const userProfile = {
 // Use propertyName as a dynamic key in userProfile, assigning a relevant value.
 console.log(userProfile[propertyName])
 //<------------------------------------------------------------------->
+
+//Import and Export======================================
+//exports multiples items froma  file
+// export const myNumber = 123;
+// export const myString = 'Hello';
+
+// //exports a single item from a  file
+// export default function superCoolFunction() {
+//     /* ... */
+//   }
+
+// //==after exporting you need to import the data in the other file
+// //this imports named exports
+// import { myNumber, myString } from './myData.js';
+
+//   //this imports a default  export
+//   import superCoolFunction from './superCoolFunction.js';
+
+//   //this imports all named exports as a single object
+//   import * as MyData from './myData.js';
+// console.log(MyData.myNumber);
+// console.log(MyData.myString);
+
+//<-------------------------------------exercise 7--------------------------------->
+
+//check exporting and importing File.js
+
+//<------------------------------------------------------------------->
+
+//Default Parameters
+// function addThreeNumbers(numA, numB, numC) {
+//     return numA + numB + numC;
+//   }
+  
+//   addThreeNumbers(2);
+
+// //This one has default parameters for numB and numC so it wont return NaN
+//   function addThreeNumbers(numA, numB = 2, numC = 1) {
+//     return numA + numB + numC;
+//   }
+  
+//   addThreeNumbers(2);
+  
+//   //the set parameters number overides the defaultParameter, so the outcome here is still 5
+//   function addThreeNumbers(numA = 1, numB = 2, numC = 1) {
+//     return numA + numB + numC;
+//   }
+  
+//   addThreeNumbers(2);
+  
+
+//<-------------------------------------exercise 8--------------------------------->
+
+// Create a function that takes two parameters, `noun` and `adjective`, both with the following respective default values:
+
+// 1. `cat`
+
+// 2. `white`
+
+// The function should log a sentence 'The cat is white.' by default. The function should substitute the appropriate parameters when supplied arguments.
+
+function catColorsentence(noun = 'cat', adjective = 'white') {
+    return console.log(`The ${noun} is ${adjective}.`)
+}
+catColorsentence('dog', 'magenta')
+//<------------------------------------------------------------------->
+// const result = false && 'foo';
+// console.log(result); // Output: false
+// const result = 'hello' && '';
+// console.log(result); // Output: ''
+// const result = 'foo' && 'bar';
+// console.log(result); // Output: 'bar'
+
+// const result = '' || 'foo';
+// console.log(result); // Output: 'foo'
+// const result = 2 || 0;
+// console.log(result); // Output: 2
+// const result = '' || 0;
+// console.log(result); // Output: 0
+
+//&& grabs the first falsi (or last value)     || grabs the first truthi or last value
+
+//<-------------------------------------exercise 9--------------------------------->
+// 1. SET LANGUAGE
+
+// Construct a single line of code that assigns a default value using the logical OR operator. This line should match the logic of the following statement: 
+
+// "LANG is equal to localLangConfig or the default value of English."
+
+const localLangConfig = null;  // Change to 'es', 'fr', etc., or keep it null
+
+// a. Create a variable called LANG
+// b. Assign LANG the value of localLangConfig or 'en' as a default
+
+const LANG = localLangConfig || 'en'
+
+// Log the result
+console.log('Language setting:', LANG);
+
+
+
+// 2. SET WEBSITE THEME
+
+const userSavedTheme = null; // Change to 'dark', 'contrast', etc., or keep it null
+
+// a. Create a variable called USER_THEME
+// b. Assign USER_THEME the value of userSavedTheme or 'light' as a default
+
+const USER_THEME = userSavedTheme || 'light'
+
+// Log the result
+console.log('User theme setting:', USER_THEME);
+
+
+//<------------------------------------------------------------------->
+
+
+
+
+//<-------------------------------------exercise 10--------------------------------->
+// Optional chaining, for grabbing deeply seeded variables in an object
+
+const adventurer = {
+    name: 'Alice',
+  };
+  
+//   console.log(adventurer.dog.name); // TypeError: Cannot read properties of undefined (reading 'name'
+  
+  let dog = adventurer.dog?.name;
+  
+  console.log(dog); // undefined
+  
+
+// Now check for `cat.age` on `adventurer`. See how it errors out? Use optional chaining in a console.log that it returns undefined instead.
+
+
+let cat = adventurer.cat?.name; // Your code here
+
+console.log(cat);
+
+//<------------------------------------------------------------------->
